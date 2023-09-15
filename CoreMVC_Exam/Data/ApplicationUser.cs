@@ -1,6 +1,8 @@
-﻿namespace CoreMVC_Exam.Data
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace CoreMVC_Exam.Data
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser 
     {
     }
 }

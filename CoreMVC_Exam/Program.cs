@@ -1,3 +1,7 @@
+using CoreMVC_Exam.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
 namespace CoreMVC_Exam
 {
     public class Program
@@ -8,6 +12,11 @@ namespace CoreMVC_Exam
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDBContextConnection' not found.");
+
+            builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
+
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationContext>();
 
             var app = builder.Build();
 
