@@ -5,16 +5,380 @@
       "PackagePath": "staticwebassets\\CoreMVC_Exam.bundle.scp.css"
     },
     {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\CARTOON8.TTF",
+      "PackagePath": "staticwebassets\\captcha\\CARTOON8.TTF"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\back.gif",
+      "PackagePath": "staticwebassets\\captcha\\back.gif"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\captcha-config.php",
+      "PackagePath": "staticwebassets\\captcha\\captcha-config.php"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\captcha-gen.php",
+      "PackagePath": "staticwebassets\\captcha\\captcha-gen.php"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\captcha.php",
+      "PackagePath": "staticwebassets\\captcha\\captcha.php"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\camera.css",
+      "PackagePath": "staticwebassets\\css\\camera.css"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\isotope.css",
+      "PackagePath": "staticwebassets\\css\\isotope.css"
+    },
+    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\touchTouch.css",
+      "PackagePath": "staticwebassets\\css\\touchTouch.css"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\.DS_Store",
+      "PackagePath": "staticwebassets\\images\\.DS_Store"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\arr1.jpg",
+      "PackagePath": "staticwebassets\\images\\arr1.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\arr1_over.jpg",
+      "PackagePath": "staticwebassets\\images\\arr1_over.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\arrows.png",
+      "PackagePath": "staticwebassets\\images\\arrows.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\blank.png",
+      "PackagePath": "staticwebassets\\images\\blank.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\camera-loader.gif",
+      "PackagePath": "staticwebassets\\images\\camera-loader.gif"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\camera_skins.png",
+      "PackagePath": "staticwebassets\\images\\camera_skins.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\contacts01.jpg",
+      "PackagePath": "staticwebassets\\images\\contacts01.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\contacts_bg.jpg",
+      "PackagePath": "staticwebassets\\images\\contacts_bg.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery-big10.png",
+      "PackagePath": "staticwebassets\\images\\gallery-big10.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery-big11.png",
+      "PackagePath": "staticwebassets\\images\\gallery-big11.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery01.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery01.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery02.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery02.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery03.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery03.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery04.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery04.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery05.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery05.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery06.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery06.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery07.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery07.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery08.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery08.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery10.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery10.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery11.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery11.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\h1.png",
+      "PackagePath": "staticwebassets\\images\\h1.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\li_st2.png",
+      "PackagePath": "staticwebassets\\images\\li_st2.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\loader.gif",
+      "PackagePath": "staticwebassets\\images\\loader.gif"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\more01.jpg",
+      "PackagePath": "staticwebassets\\images\\more01.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\more01.png",
+      "PackagePath": "staticwebassets\\images\\more01.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\more02.jpg",
+      "PackagePath": "staticwebassets\\images\\more02.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\packages_bg.jpg",
+      "PackagePath": "staticwebassets\\images\\packages_bg.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\pag.png",
+      "PackagePath": "staticwebassets\\images\\pag.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\pag_active.png",
+      "PackagePath": "staticwebassets\\images\\pag_active.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\pag_hover.png",
+      "PackagePath": "staticwebassets\\images\\pag_hover.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\page_slide1.jpg",
+      "PackagePath": "staticwebassets\\images\\page_slide1.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\parallax1.jpg",
+      "PackagePath": "staticwebassets\\images\\parallax1.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\photo1.png",
+      "PackagePath": "staticwebassets\\images\\photo1.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\responsive.png",
+      "PackagePath": "staticwebassets\\images\\responsive.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\screen.jpg",
+      "PackagePath": "staticwebassets\\images\\screen.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1.png",
+      "PackagePath": "staticwebassets\\images\\services1.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1_bg.jpg",
+      "PackagePath": "staticwebassets\\images\\services1_bg.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1_bg.png",
+      "PackagePath": "staticwebassets\\images\\services1_bg.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services2.png",
+      "PackagePath": "staticwebassets\\images\\services2.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services3.png",
+      "PackagePath": "staticwebassets\\images\\services3.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services3_bg.jpg",
+      "PackagePath": "staticwebassets\\images\\services3_bg.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\slide02.jpg",
+      "PackagePath": "staticwebassets\\images\\slide02.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\slide03.jpeg",
+      "PackagePath": "staticwebassets\\images\\slide03.jpeg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team01.jpg",
+      "PackagePath": "staticwebassets\\images\\team01.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team02.jpg",
+      "PackagePath": "staticwebassets\\images\\team02.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team03.jpg",
+      "PackagePath": "staticwebassets\\images\\team03.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team04.jpg",
+      "PackagePath": "staticwebassets\\images\\team04.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team05.jpg",
+      "PackagePath": "staticwebassets\\images\\team05.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team06.jpg",
+      "PackagePath": "staticwebassets\\images\\team06.jpg"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\testimonial1.png",
+      "PackagePath": "staticwebassets\\images\\testimonial1.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\testimonial2.png",
+      "PackagePath": "staticwebassets\\images\\testimonial2.png"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\totop.gif",
+      "PackagePath": "staticwebassets\\images\\totop.gif"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\SmoothScroll.js",
+      "PackagePath": "staticwebassets\\js\\SmoothScroll.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\camera.js",
+      "PackagePath": "staticwebassets\\js\\camera.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\cform.js",
+      "PackagePath": "staticwebassets\\js\\cform.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-migrate-1.2.1.min.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.easing.1.3.js",
+      "PackagePath": "staticwebassets\\js\\jquery.easing.1.3.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.equalheights.js",
+      "PackagePath": "staticwebassets\\js\\jquery.equalheights.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.isotope.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.isotope.min.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\jquery.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.mobile.customized.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.mobile.customized.min.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.parallax-1.1.3.js",
+      "PackagePath": "staticwebassets\\js\\jquery.parallax-1.1.3.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.parallax-1.1.3.resize.js",
+      "PackagePath": "staticwebassets\\js\\jquery.parallax-1.1.3.resize.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.queryloader2.js",
+      "PackagePath": "staticwebassets\\js\\jquery.queryloader2.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery.ui.totop.js",
+      "PackagePath": "staticwebassets\\js\\jquery.ui.totop.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\superfish.js",
+      "PackagePath": "staticwebassets\\js\\superfish.js"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\touchTouch.jquery.js",
+      "PackagePath": "staticwebassets\\js\\touchTouch.jquery.js"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -243,6 +607,18 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\php\\contact.php",
+      "PackagePath": "staticwebassets\\php\\contact.php"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\php\\contact_config.php",
+      "PackagePath": "staticwebassets\\php\\contact_config.php"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\php\\functions.php",
+      "PackagePath": "staticwebassets\\php\\functions.php"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CoreMVC_Exam.Microsoft.AspNetCore.StaticWebAssets.props",
