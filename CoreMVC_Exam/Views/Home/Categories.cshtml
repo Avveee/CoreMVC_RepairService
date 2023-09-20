@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CoreMVC_Exam.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h2>Category</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" id="categoriesTable" name="categoriesTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            $.ajax({
+                url: '/api/Categories',
+                method: "GET",
+                dataType: 'JSON',
+                contentType: 'application/json',
+                cache: false,
+                processData: false,
+                beforeSend: function (xheader) {
+                    var token = sessionStorage.getItem(tokenKey);
+                    console.log(token);
+                    xheader.setRequestHeader("Authorization", "Bearer " + token);
+                },
+                success: function (data) {
+                    console.log(data);
+
+                    // получить ссылку на таблицу с результатами
+                    var table = $('#categoriesTable');
+
+                    // удалить все старые строки
+                    table.find("tbody tr").remove();
+
+                    // перебрать коллекцию в Json и создать новые строки таблицы на их основе
+                    data.forEach(function (category) {
+                        table.append("<tr><td>" + category.id + "</td><td>" + category.name);
+                    });
+                },
+                error: function (data) {
+                    alert('Error: ' + data.statusText);
+                    console.log(data);
+                }
+            })
+                } });
+        </script>

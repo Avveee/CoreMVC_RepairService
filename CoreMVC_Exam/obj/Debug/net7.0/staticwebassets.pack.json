@@ -473,10 +473,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\vector\\default-monochrome.svg",
-      "PackagePath": "staticwebassets\\vector\\default-monochrome.svg"
-    },
-    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CoreMVC_Exam.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

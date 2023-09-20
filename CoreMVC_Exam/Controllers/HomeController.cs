@@ -13,6 +13,11 @@ namespace CoreMVC_Exam.Controllers
             _logger = logger;
         }
 
+        public IActionResult Categories()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
