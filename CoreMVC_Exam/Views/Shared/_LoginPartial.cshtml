@@ -1,19 +1,19 @@
 ﻿<div id="loggedIn" style="display: none">
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav sf-menu clearfix">
         <li><label style="color: lightgray; margin-top: 15px;">Hello, <span id="userName"></span></label></li>
         <li><button style="margin-top: 12px; margin-left: 10px;" id='logoutButton' class='btn-link'>Log out</button></li>
     </ul>
 </div>
 
-<div id="loggedOut" style="display: none">
-    <ul class="nav navbar-nav navbar-right">
+<div id="loggedOut" class="navbar-collapse navbar-collapse_ collapse">
+    <ul class="nav navbar-nav sf-menu clearfix">
         <li style="margin-top: 12px;">
             <label style="color: lightgray;" for="email">E-mail:&nbsp;&nbsp;</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" class="form-control" />
         </li>
         <li style="margin-top: 12px;">
             <label style="color: lightgray; margin-left: 10px;" for="password">Password:&nbsp;&nbsp;</label>
-            <input type="password" id="password" />
+            <input type="password" id="password" class="form-control" />
         </li>
         <li><button style="margin-top: 12px; margin-left: 10px;" id='loginButton' class='btn-link'>Log in</button></li>
     </ul>
