@@ -5,26 +5,6 @@
       "PackagePath": "staticwebassets\\CoreMVC_Exam.bundle.scp.css"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\CARTOON8.TTF",
-      "PackagePath": "staticwebassets\\captcha\\CARTOON8.TTF"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\back.gif",
-      "PackagePath": "staticwebassets\\captcha\\back.gif"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\captcha-config.php",
-      "PackagePath": "staticwebassets\\captcha\\captcha-config.php"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\captcha-gen.php",
-      "PackagePath": "staticwebassets\\captcha\\captcha-gen.php"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\captcha\\captcha.php",
-      "PackagePath": "staticwebassets\\captcha\\captcha.php"
-    },
-    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
@@ -129,54 +109,6 @@
       "PackagePath": "staticwebassets\\images\\contacts_bg.jpg"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery-big10.png",
-      "PackagePath": "staticwebassets\\images\\gallery-big10.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery-big11.png",
-      "PackagePath": "staticwebassets\\images\\gallery-big11.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery01.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery01.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery02.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery02.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery03.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery03.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery04.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery04.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery05.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery05.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery06.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery06.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery07.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery07.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery08.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery08.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery10.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery10.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\gallery11.jpg",
-      "PackagePath": "staticwebassets\\images\\gallery11.jpg"
-    },
-    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\h1.png",
       "PackagePath": "staticwebassets\\images\\h1.png"
     },
@@ -233,12 +165,8 @@
       "PackagePath": "staticwebassets\\images\\photo1.png"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\responsive.png",
-      "PackagePath": "staticwebassets\\images\\responsive.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\screen.jpg",
-      "PackagePath": "staticwebassets\\images\\screen.jpg"
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1.jpg",
+      "PackagePath": "staticwebassets\\images\\services1.jpg"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1.png",
@@ -253,16 +181,12 @@
       "PackagePath": "staticwebassets\\images\\services1_bg.png"
     },
     {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services2.jpg",
+      "PackagePath": "staticwebassets\\images\\services2.jpg"
+    },
+    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services2.png",
       "PackagePath": "staticwebassets\\images\\services2.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services3.png",
-      "PackagePath": "staticwebassets\\images\\services3.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services3_bg.jpg",
-      "PackagePath": "staticwebassets\\images\\services3_bg.jpg"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\slide02.jpg",
@@ -271,30 +195,6 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\slide03.jpeg",
       "PackagePath": "staticwebassets\\images\\slide03.jpeg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team01.jpg",
-      "PackagePath": "staticwebassets\\images\\team01.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team02.jpg",
-      "PackagePath": "staticwebassets\\images\\team02.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team03.jpg",
-      "PackagePath": "staticwebassets\\images\\team03.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team04.jpg",
-      "PackagePath": "staticwebassets\\images\\team04.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team05.jpg",
-      "PackagePath": "staticwebassets\\images\\team05.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\team06.jpg",
-      "PackagePath": "staticwebassets\\images\\team06.jpg"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\testimonial1.png",
