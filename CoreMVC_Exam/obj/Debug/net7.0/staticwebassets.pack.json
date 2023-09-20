@@ -73,10 +73,6 @@
       "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\.DS_Store",
-      "PackagePath": "staticwebassets\\images\\.DS_Store"
-    },
-    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\arr1.jpg",
       "PackagePath": "staticwebassets\\images\\arr1.jpg"
     },
@@ -87,10 +83,6 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\arrows.png",
       "PackagePath": "staticwebassets\\images\\arrows.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\blank.png",
-      "PackagePath": "staticwebassets\\images\\blank.png"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\camera-loader.gif",
@@ -119,10 +111,6 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\loader.gif",
       "PackagePath": "staticwebassets\\images\\loader.gif"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\logo.png",
-      "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\more01.jpg",
@@ -169,24 +157,8 @@
       "PackagePath": "staticwebassets\\images\\services1.jpg"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1.png",
-      "PackagePath": "staticwebassets\\images\\services1.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1_bg.jpg",
-      "PackagePath": "staticwebassets\\images\\services1_bg.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services1_bg.png",
-      "PackagePath": "staticwebassets\\images\\services1_bg.png"
-    },
-    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services2.jpg",
       "PackagePath": "staticwebassets\\images\\services2.jpg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\services2.png",
-      "PackagePath": "staticwebassets\\images\\services2.png"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\slide02.jpg",
@@ -195,14 +167,6 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\slide03.jpeg",
       "PackagePath": "staticwebassets\\images\\slide03.jpeg"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\testimonial1.png",
-      "PackagePath": "staticwebassets\\images\\testimonial1.png"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\testimonial2.png",
-      "PackagePath": "staticwebassets\\images\\testimonial2.png"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\images\\totop.gif",
@@ -509,16 +473,8 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\php\\contact.php",
-      "PackagePath": "staticwebassets\\php\\contact.php"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\php\\contact_config.php",
-      "PackagePath": "staticwebassets\\php\\contact_config.php"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\php\\functions.php",
-      "PackagePath": "staticwebassets\\php\\functions.php"
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\vector\\default-monochrome.svg",
+      "PackagePath": "staticwebassets\\vector\\default-monochrome.svg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CoreMVC_Exam.Microsoft.AspNetCore.StaticWebAssets.props",

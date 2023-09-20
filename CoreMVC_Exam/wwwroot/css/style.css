@@ -88,7 +88,7 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 
 #services{}
 
-.services1{background: url(../images/services1_bg.jpg) center bottom no-repeat #fff; padding: 70px 0;border-bottom: 1px solid #f3f3f3;}
+.services1{background: center bottom no-repeat #fff; padding: 70px 0;border-bottom: 1px solid #f3f3f3;}
 .services1 .block1{}
 .services1 .block1 img{margin-left: auto; margin-right: auto;}
 .services1 .block2{padding-top: 25px;}
@@ -141,7 +141,7 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 
 #contacts{}
 
-#contacts1{border-top: 5px solid #2171aa; padding-top: 40px; padding-bottom: 80px; background: url(../images/contacts_bg.jpg) center center no-repeat; background-size: cover;}
+#contacts1{border-top: 5px solid #666666; padding-top: 40px; padding-bottom: 80px; background: url(../images/contacts_bg.jpg) center center no-repeat; background-size: cover;}
 
 .time1_wrapper{}
 .time1{display: inline-block; color: #666666; font-size: 24px; font-weight: 300; line-height: 28px;}
@@ -274,13 +274,6 @@ h4{ font-family:'Raleway'; font-weight:300; font-size:28px; color:#666666; line-
 .testimonial1{}
 .testimonial1 .txt1{background: url(../images/testimonial1.png) 15px 20px no-repeat #f1f1f1; padding: 25px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; font-style: italic;}
 .testimonial1 .txt2{background: url(../images/testimonial2.png) 0 0 no-repeat; padding-left: 25px; padding-top: 25px;}
-
-
-
-
-.google_map{width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0px; background: #fff; border: none; line-height: 1px; border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px;}
-.google_map iframe{position: relative; overflow: hidden; width: 100%; height: 480px; border: none; background: #fff; border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px;line-height: 0;}
-
 
 
 
@@ -446,16 +439,6 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 }
 @media (min-width: 481px) and (max-width: 767px) {
 
-
-
-}
-/* Landscape phones and down */
-@media (max-width: 480px) {
-	.google_map iframe{height: 240px;}
-
-	header{max-width: 210px; padding-top: 22px;}
-
-	h1{font-size:16px; padding:10px 0;}
 
 
 }

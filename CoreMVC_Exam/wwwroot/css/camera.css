@@ -1353,6 +1353,7 @@
 
 
 
+<<<<<<< HEAD
 .camera_caption {
 	left: 0;
 	top: 50%;
@@ -1421,6 +1422,16 @@
 				font-size: 28px;
 				font-style: normal;
 			}
+=======
+.camera_caption{ left: 0; top: 50%; width: auto; right: 10%; margin-top: -200px; text-align: right;}
+.camera_caption > div{padding:0; margin: 0; background: none;}
+.camera_caption .txt1{font-family: 'Raleway'; font-weight: 500; font-size: 40px; line-height: 40px; color: #ff5400; text-transform: uppercase;}
+.camera_caption .txt2{font-family: 'Raleway'; font-weight: 700; font-size: 40px; line-height: 40px; color: #fff; text-transform: uppercase; padding-top: 0px;}
+.camera_caption .txt3{font-family: 'Raleway'; font-weight: 200; font-size: 28px; line-height: 28px; color: #2f3133; vertical-align: top; padding-top: 15px;}
+.camera_caption .txt3 span{vertical-align: top; display: inline-block; width: 156px; height: 156px; line-height: 156px; text-align: center; background: #009cde; color: #fff; font-size: 74px;border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%; margin-left: 15px;}
+.camera_caption .txt3 span sup{font-size: 50%;}
+.camera_caption .txt3 span em{font-size: 28px; font-style: normal;}
+>>>>>>> 1d26dcb3a545070876afe43b89a6c54786efea94
 
 
 	.camera_caption.nav2 .txt3 span, .camera_caption.nav3 .txt3 span {
@@ -1445,6 +1456,7 @@
 		height: 330px;
 	}
 
+<<<<<<< HEAD
 	.camera_caption {
 		margin-top: -110px;
 	}
@@ -1453,6 +1465,16 @@
 			font-size: 25px;
 			line-height: 25px;
 		}
+=======
+	.camera_caption{margin-top: -110px;}
+
+	.camera_caption .txt1{font-size: 25px; line-height: 25px;}
+	.camera_caption .txt2{font-size: 25px; line-height: 25px;}
+	.camera_caption .txt3{font-size: 18px; line-height: 18px;padding-top: 10px;}
+	.camera_caption .txt3 span{width: 80px; height: 80px; line-height: 80px; font-size: 34px;}
+	.camera_caption .txt3 span sup{font-size: 50%;}
+	.camera_caption .txt3 span em{font-size: 18px;}
+>>>>>>> 1d26dcb3a545070876afe43b89a6c54786efea94
 
 		.camera_caption .txt2 {
 			font-size: 25px;
@@ -1491,10 +1513,15 @@
 		margin-top: -110px;
 	}
 
+<<<<<<< HEAD
 		.camera_caption .txt1 {
 			font-size: 20px;
 			line-height: 20px;
 		}
+=======
+	.camera_caption .txt1{font-size: 20px; line-height: 20px;}
+	.camera_caption .txt2{font-size: 20px; line-height: 20px;}
+>>>>>>> 1d26dcb3a545070876afe43b89a6c54786efea94
 
 		.camera_caption .txt2 {
 			font-size: 20px;
