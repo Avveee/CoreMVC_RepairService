@@ -260,3 +260,4 @@ E:\Downloads\CoreMVC_Exam\CoreMVC_Exam\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAn
 E:\Downloads\CoreMVC_Exam\CoreMVC_Exam\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 E:\Downloads\CoreMVC_Exam\CoreMVC_Exam\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 E:\Downloads\CoreMVC_Exam\CoreMVC_Exam\obj\Debug\net7.0\CoreMVC_Exam.MvcApplicationPartsAssemblyInfo.cs
+E:\Downloads\CoreMVC_Exam\CoreMVC_Exam\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
