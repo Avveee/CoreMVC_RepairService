@@ -18,6 +18,21 @@ namespace CoreMVC_Exam.Controllers
             return View();
         }
 
+        public IActionResult Clients()
+        {
+            return View();
+        }
+
+        public IActionResult Products()
+        {
+            return View();
+        }
+
+        public IActionResult Orders()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();

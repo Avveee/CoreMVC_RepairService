@@ -1,12 +1,17 @@
 ﻿@{
-    ViewBag.Title = "Categories";
+    ViewBag.Title = "Products";
 }
 
-<table id="categoriesTable" class="dataTable">
+<table id="productsTable" class="dataTable">
     <thead class="thead-dark">
         <tr>
             <th>id</th>
-            <th>name</th>
+            <th>category_id</th>
+            <th>serial_number</th>
+            <th>price</th>
+            <th>year</th>
+            <th>brand</th>
+            <th>model</th>
         </tr>
     </thead>
     <tbody></tbody>
@@ -15,9 +20,9 @@
 <script type="text/javascript">
 
 
-    window.onload = function() {
+    window.onload = function () {
         $.ajax({
-            url: '/api/Categories',
+            url: '/api/Products',
             method: "GET",
             dataType: 'JSON',
             contentType: 'application/json',
@@ -30,10 +35,10 @@
             },
             success: function (data) {
                 console.log(data);
-                var table = $('#categoriesTable');
+                var table = $('#productsTable');
                 table.find("tbody tr").remove();
-                data.forEach(function (category) {
-                    table.append("<tr><td>" + category.id + "</td><td>" + category.name);
+                data.forEach(function (product) {
+                    table.append("<tr><td>" + product.id + "</td><td>" + product.category_id + "</td><td>" + product.serial_number + "</td><td>" + product.price + "</td><td>" + product.year + "</td><td>" + product.brand + "</td><td>" + product.model);
                 });
             },
             error: function (data) {
@@ -41,6 +46,6 @@
                 console.log(data);
             }
         })
-};
+    };
 
 </script>

@@ -1,12 +1,16 @@
 ﻿@{
-    ViewBag.Title = "Categories";
+    ViewBag.Title = "Orders";
 }
 
-<table id="categoriesTable" class="dataTable">
+<table id="ordersTable" class="dataTable">
     <thead class="thead-dark">
         <tr>
             <th>id</th>
-            <th>name</th>
+            <th>product_id</th>
+            <th>client_id</th>
+            <th>start_date</th>
+            <th>end_date</th>
+            <th>price</th>
         </tr>
     </thead>
     <tbody></tbody>
@@ -15,9 +19,9 @@
 <script type="text/javascript">
 
 
-    window.onload = function() {
+    window.onload = function () {
         $.ajax({
-            url: '/api/Categories',
+            url: '/api/Orders',
             method: "GET",
             dataType: 'JSON',
             contentType: 'application/json',
@@ -30,10 +34,10 @@
             },
             success: function (data) {
                 console.log(data);
-                var table = $('#categoriesTable');
+                var table = $('#clientsTable');
                 table.find("tbody tr").remove();
-                data.forEach(function (category) {
-                    table.append("<tr><td>" + category.id + "</td><td>" + category.name);
+                data.forEach(function (order) {
+                    table.append("<tr><td>" + order.id + "</td><td>" + order.product_id + "</td><td>" + order.client_id + "</td><td>" + order.start_date + "</td><td>" + order.end_date + "</td><td>" + order.price);
                 });
             },
             error: function (data) {
@@ -41,6 +45,6 @@
                 console.log(data);
             }
         })
-};
+    };
 
 </script>
