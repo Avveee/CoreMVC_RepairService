@@ -47,23 +47,21 @@ namespace CoreMVC_Exam.Migrations
                 oldMaxLength: 128);
 
             migrationBuilder.Sql(@"
-        INSERT INTO Categories (id, name)
-        VALUES
-            ('RE0001', 'Refrigerators'),
-            ('WM0002', 'Washing Machines'),
-            ('DW0003', 'Dishwashers'),
-            ('MI0004', 'Microwaves'),
-            ('OV0005', 'Ovens'),
-            ('FR0006', 'Freezers'),
-            ('CM0007', 'Coffee Makers'),
-            ('TV0008', 'Televisions'),
-            ('VC0009', 'Vacuum Cleaners'),
-            ('BL0010', 'Blenders'),
-            ('IR0011', 'Irons'),
-            ('TO0012', 'Toasters'),
-            ('FP0013', 'Food Processors'),
-            ('HM0014', 'Hand Mixers'),
-            ('KE0015', 'Kettle');
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'BL0010', N'Blenders')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'CM0007', N'Coffee Makers')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'DW0003', N'Dishwashers')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'FP0013', N'Food Processors')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'FR0006', N'Freezers')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'HM0014', N'Hand Mixers')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'IR0011', N'Irons')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'KE0015', N'Kettle')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'MI0004', N'Microwaves')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'OV0005', N'Ovens')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'RE0001', N'Refrigerators')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'TO0012', N'Toasters')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'TV0008', N'Televisions')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'VC0009', N'Vacuum Cleaners')
+        INSERT INTO [dbo].[Categories] ([id], [name]) VALUES (N'WM0002', N'Washing Machines')
     ");
         }
 
