@@ -8,6 +8,7 @@
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your keywords">
     <meta name="author" content="Your name">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -58,10 +59,12 @@
 	<div class="navbar-collapse navbar-collapse_ collapse">
 		<ul class="nav navbar-nav sf-menu clearfix">
             <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
-			<li><a href="#services">Services</a></li>
-			<li><a href="#contacts">Contacts</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contacts">Contacts</a></li>
             <li><a asp-area="" asp-controller="Home" asp-action="Categories">Categories</a></li>
-            <li></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Clients">Clients</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
 		</ul>
 	</div>
 </div>
