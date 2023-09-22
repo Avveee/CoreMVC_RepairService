@@ -1,0 +1,103 @@
+﻿@model CoreMVC_Exam.Models.Category
+
+@{
+    ViewData["Title"] = "CreateCategory";
+}
+
+<h2>CreateCategory</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateCategory" id="validForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+
+    $('#validForm').submit(function (e) {
+
+        // предовратить отправку формы
+        e.preventDefault();
+
+        // подача Ajax-запроса на сервер при помощи JQuery
+        $.ajax({
+            url: '/api/Categories/',
+            method: "POST",
+            data: JSON.stringify({
+                id: $('#id').val(),
+                name: $('#name').val()
+            }),
+            dataType: 'JSON',
+            contentType: 'application/json',
+            cache: false,
+            processData: false,
+            beforeSend: function (xheader) {
+                var token = sessionStorage.getItem(tokenKey);
+                xheader.setRequestHeader("Authorization", "Bearer " + token);
+            },
+            success: function (data) {
+                console.log(data);
+                document.location.href = "/Home/Categories";
+            },
+
+            error: function (data) {
+                onError(data);
+            }
+        })
+    });
+
+    function onError(data) {
+        console.log(data);
+        //alert(data);
+
+        // скрыть все ошибки, показанные на предыдущем шаге валидации
+        $("input").removeClass('input-validation-error');
+        $("select").removeClass('input-validation-error');
+        $("span[data-valmsg-for]").removeClass('field-validation-error');
+        $("span[data-valmsg-for]").addClass('field-validation-valid');
+        $("span[data-valmsg-for]").text("");
+
+        // если произошла ошибка валидации
+        if (data.status == 400) {
+            console.log(data.responseJSON);
+
+            // перебрать все полученные ошибки валидации
+            //$.each(data.responseJSON.ModelState, function (key, value) {
+            $.each(data.responseJSON.errors, function (key, value) {
+                //key = key.split('.')[1];
+
+                console.log(key);
+                console.log(value);
+
+                // выделить текстовое поле с ошибкой
+                var filter = "input[name='" + key + "']";
+                $(filter).addClass('input-validation-error');
+
+                // показать сообщение об ошибке для каждого текстового поля с ошибкой
+                var validationMessageElement = $('span[data-valmsg-for="' + key + '"]');
+                validationMessageElement.removeClass('field-validation-valid');
+                validationMessageElement.addClass('field-validation-error');
+                validationMessageElement.text(value[0]);
+            });
+        }
+    }
+</script>

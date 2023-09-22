@@ -184,6 +184,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Downloads/CoreMVC_Exam/CoreMVC_Exam/Views/Home/CreateCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Downloads/CoreMVC_Exam/CoreMVC_Exam/Views/Home/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Downloads/CoreMVC_Exam/CoreMVC_Exam/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,6 +1,9 @@
 ﻿@{
     ViewBag.Title = "Categories";
 }
+<br/>
+<br />
+<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CreateCategory">Create new</a>
 
 <table id="categoriesTable" class="dataTable">
     <thead class="thead-dark">
@@ -33,7 +36,7 @@
                 var table = $('#categoriesTable');
                 table.find("tbody tr").remove();
                 data.forEach(function (category) {
-                    table.append("<tr><td>" + category.id + "</td><td>" + category.name);
+                    table.append("<tr class='js-edit' data-id=" + category.id + "><td>" + category.id + "</td><td>" + category.name + "</td>");
                 });
             },
             error: function (data) {
@@ -41,6 +44,11 @@
                 console.log(data);
             }
         })
+
+        $("#categoriesTable").on("click", ".js-edit", function () {
+        var tr = $(this);
+        window.location.href = '/Home/EditCategory/' + tr.attr("data-id");
+        });
 };
 
 </script>
