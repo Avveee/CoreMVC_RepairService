@@ -350,11 +350,7 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 	h1{font-size:46px; padding:25px 0;}
 
 }
-@media (min-width: 992px) and (max-width: 1219px) {
 
-
-
-}
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 991px) {
 	.parallax, .parallax .parallax-content, .parallax .overlay { height: 400px; }

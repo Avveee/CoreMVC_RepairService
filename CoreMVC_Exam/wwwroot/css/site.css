@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    padding-top: 60px;
 }
 
 body {
@@ -88,8 +89,16 @@ body {
     }
 
 @media (max-width: 800px) {
+    #logoSvg { width: 200px;}
     .dataTable td:nth-child(4),
     .dataTable th:nth-child(4) {
         display: none;
     }
+}
+
+.create-button {
+    color: #ff6a00;
+    margin-left: 10%;
+    text-decoration: none;
+    font-size:18pt;
 }

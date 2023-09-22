@@ -1,0 +1,138 @@
+﻿@model CoreMVC_Exam.Models.Client
+
+@{
+    ViewData["Title"] = "EditClient";
+}
+
+<h2>EditClient</h2>
+
+<h4>Client</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="validForm" asp-action="EditClient">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="passport_id" />
+            <div class="form-group">
+                <label asp-for="full_name" class="control-label"></label>
+                <input asp-for="full_name" class="form-control" />
+                <span asp-validation-for="full_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phone_number" class="control-label"></label>
+                <input asp-for="phone_number" class="form-control" />
+                <span asp-validation-for="phone_number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="birthday" class="control-label"></label>
+                <input asp-for="birthday" class="form-control" />
+                <span asp-validation-for="birthday" class="text-danger"></span>
+            </div>
+            <div id="submitDiv" class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+                <button class='btn-link js-delete'>Delete</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+
+    $('#validForm').submit(function (e) {
+        // предовратить отправку формы
+        e.preventDefault();
+
+        // подача Ajax-запроса на сервер при помощи JQuery
+        $.ajax({
+            url: '/api/Clients/' + $('#passport_id').val(),
+            method: "PUT",
+            data: JSON.stringify({
+                passport_id: $('#passport_id').val(),
+                full_name: $('#full_name').val(),
+                address: $('#address').val(),
+                phone_number: $('#phone_number').val(),
+                birthday: $('#birthday').val()
+            }),
+            dataType: 'JSON',
+            contentType: 'application/json',
+            cache: false,
+            processData: false,
+            beforeSend: function (xheader) {
+                var token = sessionStorage.getItem(tokenKey);
+                xheader.setRequestHeader("Authorization", "Bearer " + token);
+            },
+            success: function (data) {
+                console.log(data);
+                document.location.href = "/Home/Clients";
+            },
+            error: function (data) {
+                onError(data);
+            }
+        })
+    });
+
+    function onError(data) {
+        console.log(data);
+        //alert(data);
+
+        // скрыть все ошибки, показанные на предыдущем шаге валидации
+        $("input").removeClass('input-validation-error');
+        $("select").removeClass('input-validation-error');
+        $("span[data-valmsg-for]").removeClass('field-validation-error');
+        $("span[data-valmsg-for]").addClass('field-validation-valid');
+        $("span[data-valmsg-for]").text("");
+
+        // если произошла ошибка валидации
+        if (data.status == 400) {
+            console.log(data.responseJSON);
+
+            // перебрать все полученные ошибки валидации
+            //$.each(data.responseJSON.ModelState, function (key, value) {
+            $.each(data.responseJSON.errors, function (key, value) {
+                //key = key.split('.')[1];
+
+                console.log(key);
+                console.log(value);
+
+                // выделить текстовое поле с ошибкой
+                var filter = "input[name='" + key + "']";
+                $(filter).addClass('input-validation-error');
+
+                // показать сообщение об ошибке для каждого текстового поля с ошибкой
+                var validationMessageElement = $('span[data-valmsg-for="' + key + '"]');
+                validationMessageElement.removeClass('field-validation-valid');
+                validationMessageElement.addClass('field-validation-error');
+                validationMessageElement.text(value[0]);
+            });
+        }
+    }
+
+    $("#submitDiv").on("click", ".js-delete", function () {
+        var button = $(this);
+        {
+            $.ajax({
+                url: "/api/Clients/" + $('#passport_id').val(),
+                method: "DELETE",
+                beforeSend: function (xheader) {
+                    var token = sessionStorage.getItem(tokenKey);
+                    xheader.setRequestHeader("Authorization", "Bearer " + token);
+                },
+                success: function () {
+                    document.location.href = "/Home/Clients";
+                }
+            }).fail(function () {
+                alert('fail');
+            })
+        }
+    });
+</script>
+
