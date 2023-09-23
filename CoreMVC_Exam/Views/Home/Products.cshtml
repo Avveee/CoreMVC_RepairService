@@ -2,6 +2,8 @@
     ViewBag.Title = "Products";
 }
 
+<a class="create-button" asp-area="" asp-controller="Home" asp-action="CreateProduct">Create new</a>
+
 <table id="productsTable" class="dataTable">
     <thead class="thead-dark">
         <tr>
@@ -38,7 +40,7 @@
                 var table = $('#productsTable');
                 table.find("tbody tr").remove();
                 data.forEach(function (product) {
-                    table.append("<tr><td>" + product.id + "</td><td>" + product.category_id + "</td><td>" + product.serial_number + "</td><td>" + product.price + "</td><td>" + product.year + "</td><td>" + product.brand + "</td><td>" + product.model);
+                    table.append("<tr class='js-edit' data-id=" + product.id + "><td>" + product.id + "</td><td>" + product.category_id + "</td><td>" + product.serial_number + "</td><td>" + product.price + "</td><td>" + product.year + "</td><td>" + product.brand + "</td><td>" + product.model);
                 });
             },
             error: function (data) {
@@ -47,5 +49,10 @@
             }
         })
     };
+
+    $("#productsTable").on("click", ".js-edit", function () {
+        var tr = $(this);
+        window.location.href = '/Home/EditProduct/' + tr.attr("data-id");
+        });
 
 </script>

@@ -66,9 +66,43 @@ namespace CoreMVC_Exam.Controllers
             return View();
         }
 
+        public ActionResult CreateProduct()
+        {
+            return View();
+        }
+
+        public ActionResult EditProduct(string id)
+        {
+            var product = (from p in _context.Products
+                       where p.id == id
+                       select p).FirstOrDefault();
+
+            if (product == null)
+                return RedirectToAction("Products", "Home");
+
+            return View("EditProduct", product);
+        }
+
         public IActionResult Orders()
         {
             return View();
+        }
+
+        public ActionResult CreateOrder()
+        {
+            return View();
+        }
+
+        public ActionResult EditOrder(string id)
+        {
+            var order = (from o in _context.Categories
+                       where o.id == id
+                       select o).FirstOrDefault();
+
+            if (order == null)
+                return RedirectToAction("Categories", "Home");
+
+            return View("EditCategory", order);
         }
 
         public IActionResult Index()
