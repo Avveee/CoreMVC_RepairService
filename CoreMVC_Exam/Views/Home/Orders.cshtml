@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Orders";
 }
+<a class="create-button" asp-area="" asp-controller="Home" asp-action="CreateOrder">Create new</a>
 
 <table id="ordersTable" class="dataTable">
     <thead class="thead-dark">
@@ -37,7 +38,7 @@
                 var table = $('#ordersTable');
                 table.find("tbody tr").remove();
                 data.forEach(function (order) {
-                    table.append("<tr><td>" + order.id + "</td><td>" + order.product_id + "</td><td>" + order.client_id + "</td><td>" + order.start_date + "</td><td>" + order.end_date + "</td><td>" + order.price);
+                    table.append("<tr class='js-edit' data-id=" + order.id + "><td>" + order.id + "</td><td>" + order.product_id + "</td><td>" + order.client_id + "</td><td>" + order.start_date + "</td><td>" + order.end_date + "</td><td>" + order.price);
                 });
             },
             error: function (data) {
@@ -47,4 +48,8 @@
         })
     };
 
+    $("#ordersTable").on("click", ".js-edit", function () {
+        var tr = $(this);
+        window.location.href = '/Home/EditOrder/' + tr.attr("data-id");
+        });
 </script>

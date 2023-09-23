@@ -95,14 +95,14 @@ namespace CoreMVC_Exam.Controllers
 
         public ActionResult EditOrder(string id)
         {
-            var order = (from o in _context.Categories
+            var order = (from o in _context.Orders
                        where o.id == id
                        select o).FirstOrDefault();
 
             if (order == null)
-                return RedirectToAction("Categories", "Home");
+                return RedirectToAction("Orders", "Home");
 
-            return View("EditCategory", order);
+            return View("EditOrder", order);
         }
 
         public IActionResult Index()
