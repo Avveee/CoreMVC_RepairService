@@ -100,7 +100,7 @@ namespace CoreMVC_Exam.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("CoreMVC_Exam.Models.Client", b =>
@@ -132,7 +132,7 @@ namespace CoreMVC_Exam.Migrations
 
                     b.HasKey("passport_id");
 
-                    b.ToTable("Clients");
+                    b.ToTable("Clients", (string)null);
                 });
 
             modelBuilder.Entity("CoreMVC_Exam.Models.Order", b =>
@@ -163,7 +163,7 @@ namespace CoreMVC_Exam.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("CoreMVC_Exam.Models.Product", b =>
@@ -202,7 +202,7 @@ namespace CoreMVC_Exam.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

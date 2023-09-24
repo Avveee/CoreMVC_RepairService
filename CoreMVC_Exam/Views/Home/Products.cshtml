@@ -30,11 +30,6 @@
             contentType: 'application/json',
             cache: false,
             processData: false,
-            beforeSend: function (xheader) {
-                var token = sessionStorage.getItem(tokenKey);
-                console.log(token);
-                xheader.setRequestHeader("Authorization", "Bearer " + token);
-            },
             success: function (data) {
                 console.log(data);
                 var table = $('#productsTable');
