@@ -72,10 +72,6 @@
             contentType: 'application/json',
             cache: false,
             processData: false,
-            beforeSend: function (xheader) {
-                var token = sessionStorage.getItem(tokenKey);
-                xheader.setRequestHeader("Authorization", "Bearer " + token);
-            },
             success: function (data) {
                 console.log(data);
                 document.location.href = "/Home/Orders";
@@ -128,10 +124,6 @@
             $.ajax({
                 url: "/api/Orders/" + $('#id').val(),
                 method: "DELETE",
-                beforeSend: function (xheader) {
-                    var token = sessionStorage.getItem(tokenKey);
-                    xheader.setRequestHeader("Authorization", "Bearer " + token);
-                },
                 success: function () {
                     document.location.href = "/Home/Orders";
                 }

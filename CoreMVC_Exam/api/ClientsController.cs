@@ -35,53 +35,6 @@ namespace CoreMVC_Exam.api
             _context = context;
         }
 
-        [Route("Login")] // /login
-        [HttpPost]
-        public async Task<ActionResult> Login(LoginViewModel model)
-        {
-            var user = await _userManager.FindByNameAsync(model.Username);
-            if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
-            {
-                var guid = Guid.NewGuid().ToString();
-                // https://datatracker.ietf.org/doc/html/rfc7519#section-4
-                var claims = new List<Claim> {
-                    new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                    new Claim(JwtRegisteredClaimNames.Jti, guid),
-                    new Claim(JwtRegisteredClaimNames.NameId, user.Id)
-                };
-
-                var roles = await _userManager.GetRolesAsync(user);
-
-                foreach (var role in roles)
-                {
-                    var roleClaim = new Claim(ClaimTypes.Role, role);
-                    claims.Add(roleClaim);
-                }
-
-                var signingKey = new SymmetricSecurityKey(
-                  Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
-
-                int expiryInMinutes = Convert.ToInt32(_configuration["Jwt:ExpiryInMinutes"]);
-
-                var token = new JwtSecurityToken(
-                  issuer: _configuration["Jwt:Site"],
-                  audience: _configuration["Jwt:Site"],
-                  claims: claims,
-                  expires: DateTime.UtcNow.AddMinutes(expiryInMinutes),
-                  signingCredentials: new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256)
-                );
-
-                return Ok(
-                  new
-                  {
-                      access_token = new JwtSecurityTokenHandler().WriteToken(token),
-                      userName = model.Username,
-                      expiration = token.ValidTo
-                  });
-            }
-            return Unauthorized();
-        }
-
         // GET: api/Clients
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Client>>> GetClients()

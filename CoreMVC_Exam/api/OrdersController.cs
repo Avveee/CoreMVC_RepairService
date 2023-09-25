@@ -25,11 +25,26 @@ namespace CoreMVC_Exam.api
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
-          if (_context.Orders == null)
-          {
-              return NotFound();
-          }
-            return await _context.Orders.ToListAsync();
+            if (_context.Orders == null)
+            {
+                return NotFound();
+            }
+            if (User.Identity.IsAuthenticated)
+            {
+
+                if(User.IsInRole("Admin"))
+                    return await _context.Orders.ToListAsync();
+                else
+#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
+
+                    return await _context.Orders.Where(o => 
+                    o.client_id == _context.UsersClients.FirstOrDefault(uc => 
+                    uc.user_id == _context.Users.FirstOrDefault(u => 
+                    u.UserName == User.Identity.Name).Id).passport_id).ToListAsync();
+
+#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
+            }
+            return Unauthorized();
         }
 
         // GET: api/Orders/5

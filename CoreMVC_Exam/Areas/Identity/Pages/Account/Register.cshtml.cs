@@ -19,6 +19,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
+using CoreMVC_Exam.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Net;
+using System.Text.Json;
+using Microsoft.AspNetCore.Http.Extensions;
 
 namespace CoreMVC_Exam.Areas.Identity.Pages.Account
 {
@@ -26,17 +33,21 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationContext _context;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager,
+            ApplicationContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +55,8 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
+            _context = context;
         }
 
         /// <summary>
@@ -98,6 +111,28 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [StringLength(6)]
+            [Display(Name = "passport_id")]
+            [Required]
+            public string passport_id { get; set; }
+
+            [StringLength(100)]
+            [Display(Name = "full_name")]
+            [Required]
+            public string full_name { get; set; }
+
+            [Display(Name = "address")]
+            [Required]
+            public string address { get; set; }
+
+            [Display(Name = "phone_number")]
+            public string phone_number { get; set; }
+
+            [Column("birthday", TypeName = "datetime")]
+            [Display(Name = "birthday")]
+            [Required]
+            public DateTime birthday { get; set; }
         }
 
 
@@ -113,17 +148,70 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
+                var user = new ApplicationUser
+                {
+                    UserName = Input.Email,
+                    Email = Input.Email
+                };
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                string path = Request.Scheme + "://" + Request.Host.Value.ToString();
+
+                using (HttpClient httpClient = new HttpClient())
+                {
+                    var client = new Client
+                    {
+                        passport_id = Input.passport_id,
+                        full_name = Input.full_name,
+                        address = Input.address,
+                        birthday = Input.birthday,
+                        phone_number = Input.phone_number
+                    };
+                    string jsonData = JsonSerializer.Serialize(client);
+                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await httpClient.PostAsync(path + "/api/Clients", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseText = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine(responseText);
+                    }
+                    else
+                    {
+                        return Page();
+                    }
+                }
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
                     var userId = await _userManager.GetUserIdAsync(user);
+
+                    using (HttpClient httpClient = new HttpClient())
+                    {
+                        var userClient = new UserClient
+                        {
+                            passport_id = Input.passport_id,
+                            user_id = userId
+                        };
+                        string jsonData = JsonSerializer.Serialize(userClient);
+                        var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                        HttpResponseMessage response = await httpClient.PostAsync(path + "/api/UserClients", content);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string responseText = await response.Content.ReadAsStringAsync();
+                            Console.WriteLine(responseText);
+                        }
+                        else
+                        {
+                            return Page();
+                        }
+                    }
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

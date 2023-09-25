@@ -1,4 +1,4 @@
-﻿@page
+﻿@*@page
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
@@ -64,4 +64,67 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+}*@
+
+@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
 }
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/auth.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="registrationDiv">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Passport Id</span>
+                        <input asp-for ="Input.passport_id" type="text" placeholder="Enter your passport id" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input asp-for="Input.full_name" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input asp-for="Input.Email" type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input asp-for="Input.phone_number" type="text" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Address</span>
+                        <input asp-for="Input.address" type="text" placeholder="Enter your address" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Birthday</span>
+                        <input asp-for="Input.birthday" type="date" placeholder="Enter your birthday" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input asp-for="Input.Password" type="text" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input asp-for="Input.ConfirmPassword" type="text" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary" value="Register"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>
