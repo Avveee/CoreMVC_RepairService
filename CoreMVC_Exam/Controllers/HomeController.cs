@@ -1,6 +1,7 @@
 ﻿using CoreMVC_Exam.Data;
 using CoreMVC_Exam.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
@@ -68,6 +69,7 @@ namespace CoreMVC_Exam.Controllers
 
         public ActionResult CreateProduct()
         {
+            ViewData["category_id"] = new SelectList(_context.Categories, "id", "name");
             return View();
         }
 
@@ -79,7 +81,7 @@ namespace CoreMVC_Exam.Controllers
 
             if (product == null)
                 return RedirectToAction("Products", "Home");
-
+            ViewData["category_id"] = new SelectList(_context.Categories, "id", "name");
             return View("EditProduct", product);
         }
 

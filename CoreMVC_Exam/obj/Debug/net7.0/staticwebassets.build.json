@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mLkaI5/D3a9bdMjqb7Qci4NQy2LvD1EZwwmz6c1oqvE=",
+  "Hash": "ZzYpavLsg+nCRrzY1FSQisJ+pjsI8jHa9fRqE6f/jtI=",
   "Source": "CoreMVC_Exam",
   "BasePath": "_content/CoreMVC_Exam",
   "Mode": "Default",
@@ -1207,12 +1207,12 @@
       "OriginalItemSpec": "wwwroot\\css\\touchTouch.css"
     },
     {
-      "Identity": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\favicon.ico",
+      "Identity": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\default.png",
       "SourceId": "CoreMVC_Exam",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\",
       "BasePath": "_content/CoreMVC_Exam",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "default.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1221,7 +1221,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\default.png"
     },
     {
       "Identity": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\FontAwesome.otf",

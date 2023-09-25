@@ -1509,12 +1509,21 @@
 	.camera_caption {
 		margin-top: -110px;
 	}
+
 		.camera_caption .txt1 {
 			font-size: 20px;
 			line-height: 20px;
 		}
-	.camera_caption .txt1{font-size: 20px; line-height: 20px;}
-	.camera_caption .txt2{font-size: 20px; line-height: 20px;}
+
+		.camera_caption .txt1 {
+			font-size: 20px;
+			line-height: 20px;
+		}
+
+		.camera_caption .txt2 {
+			font-size: 20px;
+			line-height: 20px;
+		}
 
 		.camera_caption .txt2 {
 			font-size: 20px;

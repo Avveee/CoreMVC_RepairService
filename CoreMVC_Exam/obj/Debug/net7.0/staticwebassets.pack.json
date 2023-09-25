@@ -37,8 +37,8 @@
       "PackagePath": "staticwebassets\\css\\touchTouch.css"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\default.png",
+      "PackagePath": "staticwebassets\\default.png"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\fonts\\FontAwesome.otf",

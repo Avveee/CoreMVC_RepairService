@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Computer Repair</title>
+    <title>TechRescue</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,7 @@
     <meta name="author" content="Your name">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="default.png" type="image/x-icon">
     <link href="~/css/bootstrap.css" rel="stylesheet">
     <link href="~/css/font-awesome.css" rel="stylesheet">
     <link href="~/css/camera.css" rel="stylesheet">
@@ -66,7 +65,7 @@
             {
                 if (User.IsInRole("Admin"))
                 {
-                    <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Categories">Categories</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Clients">Clients</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
@@ -76,7 +75,7 @@
                 }
                 else
                 {
-                    <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contacts">Contacts</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
@@ -89,7 +88,7 @@
             }
             else
             {
-                 <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
+                 <li ><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
                  <li><a href="#services">Services</a></li>
                 <li><a href="#contacts">Contacts</a></li>
                 <li >
@@ -107,14 +106,18 @@
 </div>
 
 <script>
-        let listItems = document.querySelectorAll('#menuList li');
+        //let listItems = document.querySelectorAll('#menuList li');
 
-        function handleItemClick(event) {
-            listItems.forEach((item) => {
-                item.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-        }
+        //function handleItemClick(event) {
+        //    listItems.forEach((item) => {
+        //        item.classList.remove('active');
+        //    });
+        //    event.currentTarget.classList.add('active');
+
+        //    listItems.forEach((item) => {
+        //        item.addEventListener('click', handleItemClick);
+        //    });
+        //}
 </script>
 </body>
 </html>
