@@ -8,20 +8,20 @@ namespace CoreMVC_Exam.Models
     public class Order
     {
         [Key]
-        [StringLength(6)]
-        [Required]
+        [StringLength(6, ErrorMessage = "Length limit exceeded")]
+        [Required(ErrorMessage = "Field is required")]
         public string id { get; set; }
 
         [ForeignKey("product_id")]
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         public string product_id { get; set; }
 
         [ForeignKey("client_id")]
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         public string client_id { get; set;}
 
         [Column("start_date", TypeName = "datetime")]
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         public DateTime start_date { get; set; }
 
         [Column("end_date", TypeName = "datetime")]

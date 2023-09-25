@@ -7,12 +7,12 @@ namespace CoreMVC_Exam.Models
     public class Category
     {
         [Key]
-        [StringLength(6)]
-        [Required]
+        [StringLength(6, ErrorMessage = "Length limit exceeded")]
+        [Required(ErrorMessage = "Field is required")]
         public string id { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(20, ErrorMessage = "Length limit exceeded")]
         public string name { get; set; }
     }
 }

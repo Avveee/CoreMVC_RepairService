@@ -8,25 +8,28 @@ namespace CoreMVC_Exam.Models
     public class Client
     {
         [Key]
-        [StringLength(6)]
+        [StringLength(6, ErrorMessage = "Length limit exceeded")]
         [Column("passport_id")]
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         public string passport_id { get; set; }
 
-        [StringLength(100)]
+        [StringLength(100, ErrorMessage = "Length limit exceeded")]
         [Column("full_name")]
-        [Required]
+        [RegularExpression("^[A-Za-zа-яА-Я]+(?:[-\\s][A-Za-zа-яА-Я]+)*$", ErrorMessage = "Invalid name")]
+        [Required(ErrorMessage = "Field is required")]
         public string full_name { get; set; }
 
         [Column("address")]
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         public string address { get; set; }
 
         [Column("phone_number")]
+        [RegularExpression("^\\+?\\d{1,3}(\\(\\d{1,3}\\))?[-\\d]+$", ErrorMessage = "Invalid phone number")]
+        [Required(ErrorMessage = "Field is required")]
         public string phone_number { get; set; }
 
         [Column("birthday", TypeName = "datetime")]
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         public DateTime birthday { get; set; }
 
     }

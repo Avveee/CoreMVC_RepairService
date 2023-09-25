@@ -6,34 +6,34 @@ namespace CoreMVC_Exam.Models
     [Table("Products")]
     public class Product
     {
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         [StringLength(6)]
         [Key]
         public string id { get; set; }
 
-        [Required]
-        [StringLength(6)]
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(6, ErrorMessage = "Length limit exceeded")]
         [ForeignKey("category_id")]
         public string category_id { get; set; }
 
-        [StringLength(30)]
-        [Required]
+        [StringLength(30, ErrorMessage = "Length limit exceeded")]
+        [Required(ErrorMessage = "Field is required")]
         public string serial_number { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         [Column("price", TypeName = "money")]
         public decimal price { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Field is required")]
         [Column("year", TypeName = "datetime")]
         public DateTime year { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(20, ErrorMessage = "Length limit exceeded")]
         public string brand { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(20, ErrorMessage = "Length limit exceeded")]
         public string model { get; set; }
     }
 }

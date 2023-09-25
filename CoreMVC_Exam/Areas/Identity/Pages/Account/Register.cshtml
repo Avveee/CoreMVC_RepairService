@@ -87,34 +87,42 @@
                     <div class="input-box">
                         <span class="details">Passport Id</span>
                         <input asp-for ="Input.passport_id" type="text" placeholder="Enter your passport id" required>
+                        <span asp-validation-for="Input.passport_id" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Full Name</span>
                         <input asp-for="Input.full_name" type="text" placeholder="Enter your name" required>
+                        <span asp-validation-for="Input.full_name" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
                         <input asp-for="Input.Email" type="text" placeholder="Enter your email" required>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
                         <input asp-for="Input.phone_number" type="text" placeholder="Enter your number" required>
+                        <span asp-validation-for="Input.phone_number" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Address</span>
                         <input asp-for="Input.address" type="text" placeholder="Enter your address" required>
+                        <span asp-validation-for="Input.address" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Birthday</span>
                         <input asp-for="Input.birthday" type="date" placeholder="Enter your birthday" required>
+                        <span asp-validation-for="Input.birthday" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
                         <input asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder="Password" required>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
                     <div class="input-box">
                         <span class="details">Confirm Password</span>
                         <input asp-for="Input.ConfirmPassword" autocomplete="new-password" aria-required="true" placeholder="Confirm your password" required>
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="button">
