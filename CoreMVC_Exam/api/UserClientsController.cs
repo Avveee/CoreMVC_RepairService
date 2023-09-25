@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CoreMVC_Exam.Data;
 using CoreMVC_Exam.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace CoreMVC_Exam.api
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class UserClientsController : ControllerBase
     {
         private readonly ApplicationContext _context;

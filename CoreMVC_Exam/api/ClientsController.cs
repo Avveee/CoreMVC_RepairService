@@ -13,11 +13,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using CoreMVC_Exam.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace CoreMVC_Exam.api
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class ClientsController : ControllerBase
     {
         private readonly ApplicationContext _context;
