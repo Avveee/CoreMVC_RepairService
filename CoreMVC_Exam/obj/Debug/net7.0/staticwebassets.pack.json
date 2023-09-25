@@ -189,10 +189,6 @@
       "PackagePath": "staticwebassets\\js\\camera.js"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\cform.js",
-      "PackagePath": "staticwebassets\\js\\cform.js"
-    },
-    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-migrate-1.2.1.min.js"
     },
@@ -239,10 +235,6 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
-    },
-    {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\superfish.js",
-      "PackagePath": "staticwebassets\\js\\superfish.js"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\js\\touchTouch.jquery.js",

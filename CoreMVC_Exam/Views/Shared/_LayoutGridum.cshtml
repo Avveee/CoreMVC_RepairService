@@ -27,12 +27,10 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/jquery.js"></script>
     <script src="~/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="~/js/jquery.easing.1.3.js"></script>
-    <script src="~/js/superfish.js"></script>
     <script src="~/js/jquery.queryloader2.js"></script>
     <script src="~/js/jquery.ui.totop.js"></script>
     <script src="~/js/jquery.equalheights.js"></script>
@@ -42,7 +40,6 @@
     <script src="~/js/jquery.isotope.min.js"></script>
     <script src="~/js/jquery.mobile.customized.min.js"></script>
     <script src="~/js/camera.js"></script>
-    <script src="~/js/cform.js"></script>
     <script src="~/js/scripts.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </head>
@@ -64,15 +61,25 @@
 	</button>
 	<div class="navbar-collapse navbar-collapse_ collapse">
 		<ul id="menuList" class="nav navbar-nav sf-menu clearfix">
-            <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
-            @*<li><a href="#services">Services</a></li>
-            <li><a href="#contacts">Contacts</a></li>*@
-            <li><a asp-area="" asp-controller="Home" asp-action="Categories">Categories</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Clients">Clients</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
+            
             @if (SignInManager.IsSignedIn(User))
             {
+                if (User.IsInRole("Admin"))
+                {
+                    <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Categories">Categories</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Clients">Clients</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
+                    
+                }
+                else
+                {
+                    <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
+                }
                 <li>
                     <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                         <input class="logout-button" id="logout" type="submit" value="Logout" />
@@ -81,6 +88,9 @@
             }
             else
             {
+                 <li class="active"><a asp-area="home" asp-controller="Home" asp-action="Index">Home</a></li>
+                 <li><a href="#services">Services</a></li>
+                <li><a href="#contacts">Contacts</a></li>
                 <li>
                     <a id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
                 </li>
@@ -107,10 +117,6 @@
             });
             event.currentTarget.classList.add('active');
         }
-
-        listItems.forEach((item) => {
-            item.addEventListener('click', handleItemClick);
-        });
 </script>
 </body>
 </html>
