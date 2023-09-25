@@ -19,6 +19,8 @@ namespace CoreMVC_Exam.Data
 
         public virtual DbSet<Product> Products { get; set; }
 
+        public virtual DbSet<UserClient> UsersClients { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
     }
 }

@@ -154,13 +154,10 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
                     Email = Input.Email
                 };
 
+                string path = Request.Scheme + "://" + Request.Host.Value.ToString();
 
-                string path = Request.Scheme + "://" + Request.Host.Value.ToString() + "/api/Clients";
-
-                // Создаем объект HttpClient с базовым адресом
                 using (HttpClient httpClient = new HttpClient())
                 {
-                    // Сериализуем данные в JSON и отправляем POST-запрос
                     var client = new Client
                     {
                         passport_id = Input.passport_id,
@@ -172,7 +169,7 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
                     string jsonData = JsonSerializer.Serialize(client);
                     var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                    HttpResponseMessage response = await httpClient.PostAsync(path, content);
+                    HttpResponseMessage response = await httpClient.PostAsync(path + "/api/Clients", content);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -185,13 +182,36 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
                     }
                 }
 
-                    var result = await _userManager.CreateAsync(user, Input.Password);
+                var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
                     var userId = await _userManager.GetUserIdAsync(user);
+
+                    using (HttpClient httpClient = new HttpClient())
+                    {
+                        var userClient = new UserClient
+                        {
+                            passport_id = Input.passport_id,
+                            user_id = userId
+                        };
+                        string jsonData = JsonSerializer.Serialize(userClient);
+                        var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                        HttpResponseMessage response = await httpClient.PostAsync(path + "/api/UserClients", content);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string responseText = await response.Content.ReadAsStringAsync();
+                            Console.WriteLine(responseText);
+                        }
+                        else
+                        {
+                            return Page();
+                        }
+                    }
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

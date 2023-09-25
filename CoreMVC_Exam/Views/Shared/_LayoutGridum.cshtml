@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using CoreMVC_Exam.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Computer Repair</title>
@@ -65,7 +71,23 @@
             <li><a asp-area="" asp-controller="Home" asp-action="Clients">Clients</a></li>
             <li><a asp-area="" asp-controller="Home" asp-action="Orders">Orders</a></li>
             <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
-            <partial name="_LoginPartial" />
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <li>
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <input class="logout-button" id="logout" type="submit" value="Logout" />
+                    </form>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                </li>
+                <li >
+                    <a id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                </li>
+            }
 		</ul>
 	</div>
 </div>

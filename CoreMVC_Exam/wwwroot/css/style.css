@@ -438,3 +438,29 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 
 
 }
+
+.logout-button {
+	display: block;
+	text-decoration: none;
+	background: none;
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 80px;
+	color: #686868;
+	text-shadow: none;
+	padding: 0px 25px;
+	border: none;
+	margin: 0;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-bottom: 3px solid #2171aa;
+	margin-bottom: -3px;
+	text-align: center;
+	position: relative;
+	display: block;
+	float: left;
+	white-space: nowrap;
+	background: none;
+}
