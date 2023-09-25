@@ -1,20 +1,47 @@
-﻿@model CoreMVC_Exam.Models.Category
+﻿@model CoreMVC_Exam.Models.Product
 
 @{
-    ViewData["Title"] = "EditCategory";
+    ViewData["Title"] = "EditProduct";
 }
 
-<h2>Edit Category</h2>
+<h2>EditProduct</h2>
+
+<h4>Product</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="View" id="validForm">
+        <form id="validForm" asp-action="EditProduct">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
             <div class="form-group">
-                <label asp-for="name" class="control-label"></label>
-                <input asp-for="name" class="form-control" />
-                <span asp-validation-for="name" class="text-danger"></span>
+                <label asp-for="category_id" class="control-label"></label>
+                <select asp-for="category_id" class="form-control" asp-items="ViewBag.category_id"></select>
+                <span asp-validation-for="category_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="serial_number" class="control-label"></label>
+                <input asp-for="serial_number" class="form-control" />
+                <span asp-validation-for="serial_number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="year" class="control-label"></label>
+                <input asp-for="year" class="form-control" />
+                <span asp-validation-for="year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="brand" class="control-label"></label>
+                <input asp-for="brand" class="form-control" />
+                <span asp-validation-for="brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="model" class="control-label"></label>
+                <input asp-for="model" class="form-control" />
+                <span asp-validation-for="model" class="text-danger"></span>
             </div>
             <div id="submitDiv" class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -36,11 +63,16 @@
 
         // подача Ajax-запроса на сервер при помощи JQuery
         $.ajax({
-            url: '/api/Categories/' + $('#id').val(),
+            url: '/api/Products/' + $('#id').val(),
             method: "PUT",
             data: JSON.stringify({
                 id: $('#id').val(),
-                name: $('#name').val()
+                category_id: $('#category_id').val(),
+                serial_number: $('#serial_number').val(),
+                price: $('#price').val(),
+                year: $('#year').val(),
+                brand: $('#brand').val(),
+                model: $('#model').val()
             }),
             dataType: 'JSON',
             contentType: 'application/json',
@@ -48,7 +80,7 @@
             processData: false,
             success: function (data) {
                 console.log(data);
-                document.location.href = "/Home/Categories";
+                document.location.href = "/Product/Products";
             },
             error: function (data) {
                 onError(data);
@@ -96,10 +128,10 @@
         var button = $(this);
         {
             $.ajax({
-                url: "/api/Categories/" + $('#id').val(),
+                url: "/api/Products/" + $('#id').val(),
                 method: "DELETE",
                 success: function () {
-                    document.location.href = "/Home/Categories";
+                    document.location.href = "/Product/Products";
                 }
             }).fail(function () {
                 alert('fail');

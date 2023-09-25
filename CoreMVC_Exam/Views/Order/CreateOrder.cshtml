@@ -1,27 +1,41 @@
-﻿@model CoreMVC_Exam.Models.Product
+﻿@model CoreMVC_Exam.Models.Order
 
 @{
-    ViewData["Title"] = "EditProduct";
+    ViewData["Title"] = "CreateOrder";
 }
 
-<h2>EditProduct</h2>
+<h2>CreateOrder</h2>
 
-<h4>Product</h4>
+<h4>Order</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form id="validForm" asp-action="EditProduct">
+        <form id="validForm" asp-action="CreateOrder">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="id" />
             <div class="form-group">
-                <label asp-for="category_id" class="control-label"></label>
-                <select asp-for="category_id" class="form-control" asp-items="ViewBag.category_id"></select>
-                <span asp-validation-for="category_id" class="text-danger"></span>
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="serial_number" class="control-label"></label>
-                <input asp-for="serial_number" class="form-control" />
-                <span asp-validation-for="serial_number" class="text-danger"></span>
+                <label asp-for="product_id" class="control-label"></label>
+                <input asp-for="product_id" class="form-control" />
+                <span asp-validation-for="product_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="client_id" class="control-label"></label>
+                <input asp-for="client_id" class="form-control" />
+                <span asp-validation-for="client_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="start_date" class="control-label"></label>
+                <input asp-for="start_date" class="form-control" />
+                <span asp-validation-for="start_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="end_date" class="control-label"></label>
+                <input asp-for="end_date" class="form-control" />
+                <span asp-validation-for="end_date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="price" class="control-label"></label>
@@ -29,23 +43,7 @@
                 <span asp-validation-for="price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="year" class="control-label"></label>
-                <input asp-for="year" class="form-control" />
-                <span asp-validation-for="year" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="brand" class="control-label"></label>
-                <input asp-for="brand" class="form-control" />
-                <span asp-validation-for="brand" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="model" class="control-label"></label>
-                <input asp-for="model" class="form-control" />
-                <span asp-validation-for="model" class="text-danger"></span>
-            </div>
-            <div id="submitDiv" class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
-                <button class='btn-link js-delete'>Delete</button>
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
     </div>
@@ -58,21 +56,21 @@
 <script>
 
     $('#validForm').submit(function (e) {
+
         // предовратить отправку формы
         e.preventDefault();
 
         // подача Ajax-запроса на сервер при помощи JQuery
         $.ajax({
-            url: '/api/Products/' + $('#id').val(),
-            method: "PUT",
+            url: '/api/Orders/',
+            method: "POST",
             data: JSON.stringify({
                 id: $('#id').val(),
-                category_id: $('#category_id').val(),
-                serial_number: $('#serial_number').val(),
-                price: $('#price').val(),
-                year: $('#year').val(),
-                brand: $('#brand').val(),
-                model: $('#model').val()
+                product_id: $('#product_id').val(),
+                client_id: $('#client_id').val(),
+                start_date: $('#start_date').val(),
+                end_date: $('#end_date').val(),
+                price: $('#price').val()
             }),
             dataType: 'JSON',
             contentType: 'application/json',
@@ -80,8 +78,9 @@
             processData: false,
             success: function (data) {
                 console.log(data);
-                document.location.href = "/Home/Products";
+                document.location.href = "/Order/Orders";
             },
+
             error: function (data) {
                 onError(data);
             }
@@ -123,19 +122,4 @@
             });
         }
     }
-
-    $("#submitDiv").on("click", ".js-delete", function () {
-        var button = $(this);
-        {
-            $.ajax({
-                url: "/api/Products/" + $('#id').val(),
-                method: "DELETE",
-                success: function () {
-                    document.location.href = "/Home/Products";
-                }
-            }).fail(function () {
-                alert('fail');
-            })
-        }
-    });
 </script>

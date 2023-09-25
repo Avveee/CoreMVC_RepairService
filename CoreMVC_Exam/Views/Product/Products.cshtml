@@ -2,7 +2,7 @@
     ViewBag.Title = "Products";
 }
 
-<a class="create-button" asp-area="" asp-controller="Home" asp-action="CreateProduct">Create new</a>
+<a class="create-button" asp-area="" asp-controller="Product" asp-action="CreateProduct">Create new</a>
 
 <table id="productsTable" class="dataTable">
     <thead class="thead-dark">
@@ -47,7 +47,7 @@
 
     $("#productsTable").on("click", ".js-edit", function () {
         var tr = $(this);
-        window.location.href = '/Home/EditProduct/' + tr.attr("data-id");
+        window.location.href = '/Product/EditProduct/' + tr.attr("data-id");
         });
 
 </script>

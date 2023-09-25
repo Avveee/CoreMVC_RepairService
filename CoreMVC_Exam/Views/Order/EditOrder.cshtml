@@ -1,22 +1,18 @@
 ﻿@model CoreMVC_Exam.Models.Order
 
 @{
-    ViewData["Title"] = "CreateOrder";
+    ViewData["Title"] = "EditOrder";
 }
 
-<h2>CreateOrder</h2>
+<h2>EditOrder</h2>
 
 <h4>Order</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form id="validForm" asp-action="CreateOrder">
+        <form id="validForm" asp-action="EditOrder">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="id" class="control-label"></label>
-                <input asp-for="id" class="form-control" />
-                <span asp-validation-for="id" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="id" />
             <div class="form-group">
                 <label asp-for="product_id" class="control-label"></label>
                 <input asp-for="product_id" class="form-control" />
@@ -42,8 +38,9 @@
                 <input asp-for="price" class="form-control" />
                 <span asp-validation-for="price" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div id="submitDiv" class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+                <button class='btn-link js-delete'>Delete</button>
             </div>
         </form>
     </div>
@@ -56,14 +53,13 @@
 <script>
 
     $('#validForm').submit(function (e) {
-
         // предовратить отправку формы
         e.preventDefault();
 
         // подача Ajax-запроса на сервер при помощи JQuery
         $.ajax({
-            url: '/api/Orders/',
-            method: "POST",
+            url: '/api/Orders/' + $('#id').val(),
+            method: "PUT",
             data: JSON.stringify({
                 id: $('#id').val(),
                 product_id: $('#product_id').val(),
@@ -78,9 +74,8 @@
             processData: false,
             success: function (data) {
                 console.log(data);
-                document.location.href = "/Home/Orders";
+                document.location.href = "/Order/Orders";
             },
-
             error: function (data) {
                 onError(data);
             }
@@ -122,4 +117,20 @@
             });
         }
     }
+
+    $("#submitDiv").on("click", ".js-delete", function () {
+        var button = $(this);
+        {
+            $.ajax({
+                url: "/api/Orders/" + $('#id').val(),
+                method: "DELETE",
+                success: function () {
+                    document.location.href = "/Order/Orders";
+                }
+            }).fail(function () {
+                alert('fail');
+            })
+        }
+    });
 </script>
+

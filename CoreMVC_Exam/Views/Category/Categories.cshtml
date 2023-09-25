@@ -2,7 +2,7 @@
     ViewBag.Title = "Categories";
 }
 
-<a class="create-button" asp-area="" asp-controller="Home" asp-action="CreateCategory">Create new</a>
+<a class="create-button" asp-area="" asp-controller="Category" asp-action="CreateCategory">Create new</a>
 
 <table id="categoriesTable" class="dataTable">
     <thead class="thead-dark">
@@ -41,7 +41,7 @@
 
         $("#categoriesTable").on("click", ".js-edit", function () {
         var tr = $(this);
-        window.location.href = '/Home/EditCategory/' + tr.attr("data-id");
+        window.location.href = '/Category/EditCategory/' + tr.attr("data-id");
         });
 };
 

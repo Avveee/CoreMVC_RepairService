@@ -1,41 +1,27 @@
-﻿@model CoreMVC_Exam.Models.Client
+﻿@model CoreMVC_Exam.Models.Category
 
 @{
-    ViewData["Title"] = "EditClient";
+    ViewData["Title"] = "CreateCategory";
 }
 
-<h2>EditClient</h2>
-
-<h4>Client</h4>
+<h2>CreateCategory</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form id="validForm" asp-action="EditClient">
+        <form asp-action="CreateCategory" id="validForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="passport_id" />
             <div class="form-group">
-                <label asp-for="full_name" class="control-label"></label>
-                <input asp-for="full_name" class="form-control" />
-                <span asp-validation-for="full_name" class="text-danger"></span>
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="address" class="control-label"></label>
-                <input asp-for="address" class="form-control" />
-                <span asp-validation-for="address" class="text-danger"></span>
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="phone_number" class="control-label"></label>
-                <input asp-for="phone_number" class="form-control" />
-                <span asp-validation-for="phone_number" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="birthday" class="control-label"></label>
-                <input asp-for="birthday" class="form-control" />
-                <span asp-validation-for="birthday" class="text-danger"></span>
-            </div>
-            <div id="submitDiv" class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
-                <button class='btn-link js-delete'>Delete</button>
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
     </div>
@@ -48,19 +34,17 @@
 <script>
 
     $('#validForm').submit(function (e) {
+
         // предовратить отправку формы
         e.preventDefault();
 
         // подача Ajax-запроса на сервер при помощи JQuery
         $.ajax({
-            url: '/api/Clients/' + $('#passport_id').val(),
-            method: "PUT",
+            url: '/api/Categories/',
+            method: "POST",
             data: JSON.stringify({
-                passport_id: $('#passport_id').val(),
-                full_name: $('#full_name').val(),
-                address: $('#address').val(),
-                phone_number: $('#phone_number').val(),
-                birthday: $('#birthday').val()
+                id: $('#id').val(),
+                name: $('#name').val()
             }),
             dataType: 'JSON',
             contentType: 'application/json',
@@ -68,8 +52,9 @@
             processData: false,
             success: function (data) {
                 console.log(data);
-                document.location.href = "/Home/Clients";
+                document.location.href = "/Category/Categories";
             },
+
             error: function (data) {
                 onError(data);
             }
@@ -111,20 +96,4 @@
             });
         }
     }
-
-    $("#submitDiv").on("click", ".js-delete", function () {
-        var button = $(this);
-        {
-            $.ajax({
-                url: "/api/Clients/" + $('#passport_id').val(),
-                method: "DELETE",
-                success: function () {
-                    document.location.href = "/Home/Clients";
-                }
-            }).fail(function () {
-                alert('fail');
-            })
-        }
-    });
 </script>
-
