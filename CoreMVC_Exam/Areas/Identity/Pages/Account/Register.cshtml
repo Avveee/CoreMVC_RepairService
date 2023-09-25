@@ -110,11 +110,11 @@
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input asp-for="Input.Password" type="text" placeholder="Enter your password" required>
+                        <input asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder="Password" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Confirm Password</span>
-                        <input asp-for="Input.ConfirmPassword" type="text" placeholder="Confirm your password" required>
+                        <input asp-for="Input.ConfirmPassword" autocomplete="new-password" aria-required="true" placeholder="Confirm your password" required>
                     </div>
                 </div>
                 <div class="button">
