@@ -1,9 +1,11 @@
 using CoreMVC_Exam.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using System.Net;
+using CoreMVC_Exam.Services;
 
 namespace CoreMVC_Exam
 {
@@ -29,24 +31,35 @@ namespace CoreMVC_Exam
                         option.Password.RequireLowercase = false;
                     }
                 ).AddEntityFrameworkStores<ApplicationContext>()
-                .AddDefaultTokenProviders();
+            .AddDefaultTokenProviders();
 
-            // настройка генерации токенов
-            builder.Services.AddAuthentication(option => {
-                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options => {
-                options.SaveToken = true;
-                options.RequireHttpsMetadata = true;
-                options.TokenValidationParameters = new TokenValidationParameters()
+
+
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
+
+            // указание адреса страниц login, logout, accessdenied для сайта, нужно для правильной работы [Authorize]
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Identity/Account/Login";
+                options.LogoutPath = $"/Identity/Account/Logout";
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            });
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ClaimPolicy", policy =>
                 {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidAudience = builder.Configuration["Jwt:Site"],
-                    ValidIssuer = builder.Configuration["Jwt:Site"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SigningKey"]))
-                };
+                    policy.RequireClaim("Position", "Admin");
+                    policy.RequireRole("Admin");
+                });
+            });
+
+            builder.Services.AddRazorPages();
+
+            builder.Services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
             });
 
             // Add services to the container.
@@ -67,7 +80,19 @@ namespace CoreMVC_Exam
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseStatusCodePages(async context =>
+            {
+                var response = context.HttpContext.Response;
+
+                if (response.StatusCode == (int)HttpStatusCode.Unauthorized ||
+                    response.StatusCode == (int)HttpStatusCode.Forbidden)
+                    response.Redirect("/Authentication");
+            });
+
+            app.MapRazorPages();
 
             app.MapControllerRoute(
                 name: "default",
