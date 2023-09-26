@@ -4,12 +4,13 @@
     ViewData["Title"] = "EditOrder";
 }
 
-<h2>EditOrder</h2>
+<h2>Edit Order</h2>
 
-<h4>Order</h4>
+<h4>@Model.id</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<link rel="stylesheet" href="~/css/form.css" />
+<div class="formContainer">
+    <div class="content">
         <form id="validForm" asp-action="EditOrder">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
@@ -38,16 +39,16 @@
                 <input asp-for="price" class="form-control" />
                 <span asp-validation-for="price" class="text-danger"></span>
             </div>
-            <div id="submitDiv" class="form-group">
+            <div id="submitDiv" class="button">
                 <input type="submit" value="Save" class="btn btn-default" />
-                <button class='btn-link js-delete'>Delete</button>
             </div>
         </form>
+        <hr/>
+        <div style="display:flex; justify-content:space-between;">
+            <a href="javascript:window.history.back();"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <button class='btn-link js-delete'>Delete</button>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 <script>

@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\CoreMVC_Exam.bundle.scp.css"
     },
     {
-      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\auth.css",
-      "PackagePath": "staticwebassets\\css\\auth.css"
-    },
-    {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
@@ -19,6 +15,10 @@
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\form.css",
+      "PackagePath": "staticwebassets\\css\\form.css"
     },
     {
       "Id": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\wwwroot\\css\\isotope.css",

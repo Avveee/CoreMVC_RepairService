@@ -14,7 +14,7 @@ body
     font-family: 'Poppins',sans-serif;
 }
 
-.registrationDiv {
+.formContainer {
     max-width: 700px;
     width: 100%;
     background-color: #fff;
@@ -23,13 +23,13 @@ body
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
-    .registrationDiv .title {
+    .formContainer .title {
         font-size: 25px;
         font-weight: 500;
         position: relative;
     }
 
-        .registrationDiv .title::before {
+        .formContainer .title::before {
             content: "";
             position: absolute;
             left: 0;
@@ -39,7 +39,7 @@ body
             border-radius: 5px;
         }
 
-    .registrationDiv form .user-details {
+    .formContainer form .user-details {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -133,7 +133,7 @@ form .button {
     }
 
 @media(max-width: 584px) {
-    .registrationDiv {
+    .formContainer {
         max-width: 100%;
     }
 
@@ -157,7 +157,7 @@ form .button {
 }
 
 @media(max-width: 459px) {
-    .registrationDiv .content .category {
+    .formContainer .content .category {
         flex-direction: column;
     }
 }
