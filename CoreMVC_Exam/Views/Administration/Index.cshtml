@@ -49,3 +49,45 @@
         }
     </tbody>
 </table>
+
+<table id="clients" class="dataTable">
+    <thead>
+        <tr>
+            <th>Passport Id</th>
+            <th>Full name</th>
+            <th>Address</th>
+            <th>Phone number</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Clients)
+        {
+            <tr>
+                <td>@user.passport_id</td>
+                <td>@user.full_name</td>
+                <td>@user.address</td>
+                <td>@user.phone_number</td>
+                <td>@user.birthday</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<table id="usersClients" class="dataTable">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Passort Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.UsersClients)
+        {
+            <tr>
+                <td>@user.user_id</td>
+                <td>@user.passport_id</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kZCtx94W72mOjE5N3EzQKEJa+J97Zpm6nlT9wWv8gjVPRcFbTEe+oD/+9uSlS2aMPtRWQmKUJ2dNZvR4ACtFqA==",
+  "dgSpecHash": "jox+WS0P9ZuQODxalz8MU8wsSHWRviAb1hXuCHea9oJvDRBDnqeo7gyBqUKixawS8lNj7DfGoT7P2z/TTad2Eg==",
   "success": true,
-  "projectFilePath": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\CoreMVC_Exam.csproj",
+  "projectFilePath": "E:\\Downloads\\CoreMVC_RepairService\\CoreMVC_Exam\\CoreMVC_Exam.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Арсений\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Арсений\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

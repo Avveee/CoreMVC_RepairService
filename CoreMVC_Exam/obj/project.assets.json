@@ -11626,11 +11626,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\CoreMVC_Exam.csproj",
+      "projectUniqueName": "E:\\Downloads\\CoreMVC_RepairService\\CoreMVC_Exam\\CoreMVC_Exam.csproj",
       "projectName": "CoreMVC_Exam",
-      "projectPath": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\CoreMVC_Exam.csproj",
+      "projectPath": "E:\\Downloads\\CoreMVC_RepairService\\CoreMVC_Exam\\CoreMVC_Exam.csproj",
       "packagesPath": "C:\\Users\\Арсений\\.nuget\\packages\\",
-      "outputPath": "E:\\Downloads\\CoreMVC_Exam\\CoreMVC_Exam\\obj\\",
+      "outputPath": "E:\\Downloads\\CoreMVC_RepairService\\CoreMVC_Exam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Арсений\\AppData\\Roaming\\NuGet\\NuGet.Config",

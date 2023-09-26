@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using CoreMVC_Exam.Data;
 using CoreMVC_Exam.ViewModels;
+using CoreMVC_Exam.Models;
 
 [Authorize(Roles = "Admin")]
 public class AdministrationController : Controller
@@ -27,7 +28,9 @@ public class AdministrationController : Controller
         var viewModel = new AdministrationFormViewModel
         {
             Roles = _roleManager.Roles.ToList(),
-            Users = _context.Users.ToList()
+            Users = _context.Users.ToList(),
+            UsersClients = _context.UsersClients.ToList(),
+            Clients = _context.Clients.ToList()
         };
 
         return View(viewModel);
@@ -107,6 +110,17 @@ public class AdministrationController : Controller
                         var result = await _userManager.RemoveFromRoleAsync(user, item);
                     }
                 }
+
+                var userClient = _context.UsersClients.FirstOrDefault(u => u.user_id == user.Id);
+                var client = _context.Clients.FirstOrDefault(c => c.passport_id == userClient.passport_id);
+
+                if (client != null)
+                    _context.Clients.Remove(client);
+
+                if (userClient != null)
+                    _context.UsersClients.Remove(userClient);
+
+                await _context.SaveChangesAsync();
 
                 // Удаление пользователя
                 await _userManager.DeleteAsync(user);

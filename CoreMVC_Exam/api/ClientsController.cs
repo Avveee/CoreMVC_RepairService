@@ -136,12 +136,12 @@ namespace CoreMVC_Exam.api
                 return NotFound();
             }
             var client = await _context.Clients.FindAsync(id);
+
             if (client == null)
             {
                 return NotFound();
             }
 
-            _context.Clients.Remove(client);
             await _context.SaveChangesAsync();
 
             return NoContent();

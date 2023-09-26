@@ -154,33 +154,43 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
                     Email = Input.Email
                 };
 
-                string path = Request.Scheme + "://" + Request.Host.Value.ToString();
-
-                using (HttpClient httpClient = new HttpClient())
+                _context.Clients.Add(new Client
                 {
-                    var client = new Client
-                    {
-                        passport_id = Input.passport_id,
-                        full_name = Input.full_name,
-                        address = Input.address,
-                        birthday = Input.birthday,
-                        phone_number = Input.phone_number
-                    };
-                    string jsonData = JsonSerializer.Serialize(client);
-                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    passport_id = Input.passport_id,
+                    full_name = Input.full_name,
+                    address = Input.address,
+                    birthday = Input.birthday,
+                    phone_number = Input.phone_number
+                });
 
-                    HttpResponseMessage response = await httpClient.PostAsync(path + "/api/Clients", content);
+                _context.SaveChanges();
+                //string path = Request.Scheme + "://" + Request.Host.Value.ToString();
 
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string responseText = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine(responseText);
-                    }
-                    else
-                    {
-                        return Page();
-                    }
-                }
+                //using (HttpClient httpClient = new HttpClient())
+                //{
+                //    var client = new Client
+                //    {
+                //        passport_id = Input.passport_id,
+                //        full_name = Input.full_name,
+                //        address = Input.address,
+                //        birthday = Input.birthday,
+                //        phone_number = Input.phone_number
+                //    };
+                //    string jsonData = JsonSerializer.Serialize(client);
+                //    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                //    HttpResponseMessage response = await httpClient.PostAsync(path + "/api/Clients", content);
+
+                //    if (response.IsSuccessStatusCode)
+                //    {
+                //        string responseText = await response.Content.ReadAsStringAsync();
+                //        Console.WriteLine(responseText);
+                //    }
+                //    else
+                //    {
+                //        return Page();
+                //    }
+                //}
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
@@ -189,28 +199,31 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
                     var userId = await _userManager.GetUserIdAsync(user);
 
-                    using (HttpClient httpClient = new HttpClient())
-                    {
-                        var userClient = new UserClient
-                        {
-                            passport_id = Input.passport_id,
-                            user_id = userId
-                        };
-                        string jsonData = JsonSerializer.Serialize(userClient);
-                        var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    _context.UsersClients.Add(new UserClient { passport_id = Input.passport_id, user_id = userId });
+                    _context.SaveChanges();
 
-                        HttpResponseMessage response = await httpClient.PostAsync(path + "/api/UserClients", content);
+                    //using (HttpClient httpClient = new HttpClient())
+                    //{
+                    //    var userClient = new UserClient
+                    //    {
+                    //        passport_id = Input.passport_id,
+                    //        user_id = userId
+                    //    };
+                    //    string jsonData = JsonSerializer.Serialize(userClient);
+                    //    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                        if (response.IsSuccessStatusCode)
-                        {
-                            string responseText = await response.Content.ReadAsStringAsync();
-                            Console.WriteLine(responseText);
-                        }
-                        else
-                        {
-                            return Page();
-                        }
-                    }
+                    //    HttpResponseMessage response = await httpClient.PostAsync(path + "/api/UserClients", content);
+
+                    //    if (response.IsSuccessStatusCode)
+                    //    {
+                    //        string responseText = await response.Content.ReadAsStringAsync();
+                    //        Console.WriteLine(responseText);
+                    //    }
+                    //    else
+                    //    {
+                    //        return Page();
+                    //    }
+                    //}
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
@@ -229,7 +242,7 @@ namespace CoreMVC_Exam.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        //await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
                 }
